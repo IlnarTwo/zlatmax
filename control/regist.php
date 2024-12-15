@@ -4,6 +4,7 @@
     $tel = $_POST['tel'];
     $email = $_POST['email'];
     $passw = sha1($_POST['passw']);
+    $img = "default";
 
     $query = "select * from user where email = '".$email."';";
     $result = $conn->query($query);
@@ -12,7 +13,7 @@
         echo "<script>alert('Пользователь с такой почтой уже создан!');</script>";
         header("location: ../formRegist.php");
     }else{
-        $insert = "INSERT INTO `user`(`name`, `tel`, `email`, `passw`) VALUES ('".$name."','".$tel."','".$email."','".$passw."')";
+        $insert = "INSERT INTO `user`(`ava`, `name`, `tel`, `email`, `passw`) VALUES ('".$img."','".$name."','".$tel."','".$email."','".$passw."')";
         $resinto = $conn->query($insert);
         if (!empty($resinto)){
             session_start();
