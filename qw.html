@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button type="button" id="openModal">enter</button>
+    <div class="modalBlock" id="modalBlock">
+        <div class="overlay" id="overlay"></div>
+        <form action="../control/review.php" method="post" class="modal">
+            <button class="closeBtn" type="button" id="closeModal">&#10006;</button>
+            <div class="mb-3">
+                <div class="rating-area">
+                    <input type="radio" id="star-5" name="rating" value="5">
+                    <label for="star-5" title="Оценка «5»"></label>	
+                    <input type="radio" id="star-4" name="rating" value="4">
+                    <label for="star-4" title="Оценка «4»"></label>    
+                    <input type="radio" id="star-3" name="rating" value="3">
+                    <label for="star-3" title="Оценка «3»"></label>  
+                    <input type="radio" id="star-2" name="rating" value="2">
+                    <label for="star-2" title="Оценка «2»"></label>    
+                    <input type="radio" id="star-1" name="rating" value="1">
+                    <label for="star-1" title="Оценка «1»"></label>
+                </div>
+                <label for="exampleFormControlTextarea1" class="form-label">Комментарий:</label>
+                <textarea name="review" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <button type="submit" class="btnProductBlack">Отправить</button>
+            </div>
+        </form>
+    </div>  
+    <script src="js/modal.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

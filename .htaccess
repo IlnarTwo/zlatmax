@@ -1,0 +1,8 @@
+Options -Indexes
+
+DirectoryIndex index.php
+AddHandler application/x-httpd-php .html
+
+php_value memory_limit 1024M
+
+ErrorDocument 404 /404.html
