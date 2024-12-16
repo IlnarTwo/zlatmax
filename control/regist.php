@@ -19,7 +19,7 @@
             session_start();
             $_SESSION["auth"]=true;
             $_SESSION["id"]=$user['id'];
-            $_SESSION['name'];
+            $_SESSION['name']=$user['name'];
             echo "<script>alert('Вы зарегистрированы!');</script>";
             header("location: ../profil.php"); 
         }else{
